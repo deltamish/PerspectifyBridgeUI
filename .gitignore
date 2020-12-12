@@ -52,7 +52,6 @@ npm-debug.log.*
 *.code-workspace
 *.editorconfig
 
-*.lock
 
 .github
 
