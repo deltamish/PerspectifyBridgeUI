@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import icon from '../assets/icon.svg';
-import editor from './components/shared/node-editor/editor';
+import Editor from './components/shared/node-editor/basiceditor';
 
 const Hello = () => {
   return (
     <div>
       <div style={{ textAlign: 'left', width: '100vw', height: '70vh' }}>
-        <div ref={(el) => editor(el)} />
+        <Editor />
       </div>
       <div className="Hello">
         <img width="200px" alt="icon" src={icon} />
