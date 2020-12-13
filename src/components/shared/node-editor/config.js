@@ -18,11 +18,27 @@ config
       }),
     ],
   })
+  .addPortType({
+    type: 'string2',
+    name: 'Name2',
+    label: 'Text',
+    color: Colors.green,
+    controls: [
+      Controls.text({
+        name: 'string3',
+        label: 'p',
+      }),
+      Controls.text({
+        name: 'string2',
+        label: 'Texvbvbvt',
+      }),
+    ],
+  })
   .addNodeType({
     type: 'string',
     label: 'Text op',
     description: 'Outputs a string of text',
-    inputs: (ports) => [ports.string()],
+    inputs: (ports) => [ports.string(), ports.string2()],
     outputs: (ports) => [ports.string()],
   });
 
