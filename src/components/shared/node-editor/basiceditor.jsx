@@ -7,7 +7,8 @@ import config from './config';
 const SimpleEditor = () => {
   const [nodes, setNodes] = useState({});
   useEffect(() => {
-    // console.log('Nodes changed');
+    // eslint-disable-next-line prettier/prettier
+     // console.log('Nodes changed');
     // console.log(nodes);
     const nodeJson = JSON.stringify(nodes);
     // console.log(nodeJson);

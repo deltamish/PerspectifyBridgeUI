@@ -2,12 +2,23 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import icon from '../assets/icon.svg';
 import Editor from './components/shared/node-editor/basiceditor';
+import Scene from './components/shared/render/basic3d';
 
 const Hello = () => {
   return (
     <div>
-      <div style={{ textAlign: 'left', width: '100vw', height: '70vh' }}>
+      <div
+        style={{
+          textAlign: 'left',
+          width: '100vw',
+          height: '70vh',
+          resize: 'vertical',
+        }}
+      >
         <Editor />
+      </div>
+      <div style={{ textAlign: 'left', width: '100vw', height: '70vh' }}>
+        <Scene />
       </div>
       <div className="Hello">
         <img width="200px" alt="icon" src={icon} />

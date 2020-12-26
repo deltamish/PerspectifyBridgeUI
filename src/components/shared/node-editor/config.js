@@ -1,7 +1,10 @@
 import { FlumeConfig, Colors, Controls } from 'flume';
+import { floatPort } from './ports';
+import { floatNode } from './nodes';
 // use builder for differnt types aka material and state manager
 const config = new FlumeConfig();
 config
+  .addPortType(floatPort)
   .addPortType({
     type: 'string',
     name: 'string',
@@ -34,6 +37,7 @@ config
       }),
     ],
   })
+  .addNodeType(floatNode)
   .addNodeType({
     type: 'string',
     label: 'Text op',
