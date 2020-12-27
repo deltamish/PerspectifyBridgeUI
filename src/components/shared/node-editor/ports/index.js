@@ -14,5 +14,7 @@
 // Material
 
 import float from './float';
+import vec2 from './vec2';
 
 export const floatPort = float;
+export const vec2Port = vec2;

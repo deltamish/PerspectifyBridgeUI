@@ -1,10 +1,11 @@
 import { FlumeConfig, Colors, Controls } from 'flume';
-import { floatPort } from './ports';
-import { floatNode } from './nodes';
+import { floatPort, vec2Port } from './ports';
+import { floatNode, vornoiGeneratorNode } from './nodes';
 // use builder for differnt types aka material and state manager
 const config = new FlumeConfig();
 config
   .addPortType(floatPort)
+  .addPortType(vec2Port)
   .addPortType({
     type: 'string',
     name: 'string',
@@ -37,6 +38,7 @@ config
       }),
     ],
   })
+  .addNodeType(vornoiGeneratorNode)
   .addNodeType(floatNode)
   .addNodeType({
     type: 'string',
